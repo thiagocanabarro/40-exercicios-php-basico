@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="ex13.php">
-        <input type="text" name="frase">
-        <br>
-        <input type="submit" value="Enviar mensagem !">
-    </form>
+    <?php
+    $msg = $_GET['msg'];
+    $busca = $_GET['busca'];
+
+    $cont = substr_count($msg, $busca);
+    echo $cont;
+    ?>
 </body>
 </html>

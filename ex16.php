@@ -7,16 +7,21 @@
 </head>
 <body>
     <?php
+    $v1 = $_GET['v1'];
+    $v2 = $_GET['v2'];
 
-    $mensagem = $_GET['frase'];
-    
-    $caracteres = strlen($mensagem);
+    //echo($v1.$v2);
+    echo("<br>");
 
-    //echo($caracteres);
-
-    for ($cont = 1 ; $cont <= $caracteres ; $cont++) {
-        echo("<br>$cont");
-
+    $soma = ($v1+$v2);
+    $soma20 = ($soma+8); 
+    $soma5 = ($soma-5);
+   
+    if ($soma > 20) {
+        echo($soma20);
+    } 
+    elseif ($soma < 20) {
+        echo($soma5);
     }
 
     ?>

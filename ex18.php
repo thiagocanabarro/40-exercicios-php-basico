@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="ex13.php">
-        <input type="text" name="frase">
-        <br>
-        <input type="submit" value="Enviar mensagem !">
-    </form>
+    <?php
+    $nome = $_GET['nome'];
+    $idade = $_GET['id'];
+    $sexo = $_GET['sex'];
+
+    if ($idade < 25 && $sexo === "Feminino") {
+        echo("Aceita");
+    } else {
+        echo ("Não aceita");
+    }
+    ?>
 </body>
 </html>
